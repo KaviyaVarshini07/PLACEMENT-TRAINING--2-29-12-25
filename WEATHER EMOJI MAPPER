@@ -1,0 +1,4 @@
+
+weather = input("Enter weather (sunny, rainy, cloudy): ").lower()
+emoji_map = {"sunny": "☀️", "rainy": "🌧️", "cloudy": "☁️"}
+print("Weather today:", emoji_map.get(weather, "❓"))
