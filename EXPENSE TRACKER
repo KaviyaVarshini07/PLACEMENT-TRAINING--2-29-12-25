@@ -1,0 +1,17 @@
+import csv
+
+def add_expense(amount, category):
+    with open("expenses.csv", "a", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow([amount, category])
+    print("Expense added!")
+
+def view_expenses():
+    with open("expenses.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            print(f"Amount: {row[0]}, Category: {row[1]}")
+
+add_expense(200, "Food")
+add_expense(100, "Transport")
+view_expenses()
